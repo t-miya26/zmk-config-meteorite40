@@ -8,13 +8,13 @@
 
         default_layer {
             bindings = <
-                &kp NO &kp Q &kp W &kp E &kp R &kp T &mkp MOUSE_BTN1
-                &mkp MOUSE_BTN2 &kp NO &kp Y &kp U &kp I &kp O &kp P
-                &kp A &kp S &kp NO &kp D &kp F &kp G &mo 2
-                &kp NO &kp H &kp J &kp NO &kp K &kp L &kp MINUS
-                &kp Z &kp X &kp C &kp V &kp NO &kp B &mt LSFT SPACE
-                &mo 3 &kp N &kp M &kp COMMA &kp DOT &kp NO &kp SLASH
-                &kp NO &kp LALT &mt LGUI TAB &kp BSPC &kp LCTRL
+                &kp KC_NO &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_T &mkp <0>
+                &mkp <1> &kp KC_NO &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P
+                &kp KC_A &kp KC_S &kp KC_NO &kp KC_D &kp KC_F &kp KC_G &mo 2
+                &kp KC_NO &kp KC_H &kp KC_J &kp KC_NO &kp KC_K &kp KC_L &kp KC_MINUS
+                &kp KC_Z &kp KC_X &kp KC_C &kp KC_V &kp KC_NO &kp KC_B &mt KC_LSFT KC_SPC
+                &mo 3 &kp KC_N &kp KC_M &kp KC_COMMA &kp KC_DOT &kp KC_NO &kp KC_SLASH
+                &kp KC_NO &kp KC_LALT &mt KC_LGUI KC_TAB &kp KC_BSPC &kp KC_LCTRL
             >;
         };
     };
