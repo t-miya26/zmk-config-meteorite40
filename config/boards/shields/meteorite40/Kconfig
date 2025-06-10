@@ -1,3 +1,0 @@
-config SHIELD_METEORITE40
-    bool "meteorite40"
-    depends on SHIELD
