@@ -8,8 +8,8 @@
 
         default_layer {
             bindings = <
-                &kp KC_NO &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_T &mkp <0>
-                &mkp <1> &kp KC_NO &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P
+                &kp KC_NO &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_T &kp KC_NO
+                &kp KC_NO &kp KC_NO &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P
                 &kp KC_A &kp KC_S &kp KC_NO &kp KC_D &kp KC_F &kp KC_G &mo 2
                 &kp KC_NO &kp KC_H &kp KC_J &kp KC_NO &kp KC_K &kp KC_L &kp KC_MINUS
                 &kp KC_Z &kp KC_X &kp KC_C &kp KC_V &kp KC_NO &kp KC_B &mt KC_LSFT KC_SPC
