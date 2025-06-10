@@ -29,7 +29,7 @@ jobs:
         run: west build -s zmk/app -b seeeduino_xiao_ble -- -DSHIELD=meteorite40
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: zmk-firmware
           path: build/zephyr/zmk.uf2
