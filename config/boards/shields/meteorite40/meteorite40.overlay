@@ -1,0 +1,9 @@
+/ {
+    kscan0: kscan@0 {
+        compatible = "zmk,kscan-charlieplex";
+        input-gpios = <&gpio0 2>, <&gpio0 3>, <&gpio0 28>, <&gpio0 29>, <&gpio0 4>, <&gpio0 5>, <&gpio1 11>;
+        scan-period-ms = <10>;
+        debounce-period-ms = <5>;
+        interrupt-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+    };
+};

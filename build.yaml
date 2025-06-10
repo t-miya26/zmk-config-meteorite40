@@ -20,6 +20,4 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: elephant42_left
-  - board: seeeduino_xiao_ble
-    shield: elephant42_right
+    shield: meteorite40
