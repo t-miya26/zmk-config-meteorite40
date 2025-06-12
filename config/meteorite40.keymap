@@ -10,15 +10,15 @@
             bindings = <
                 &kp KC_NO &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_T &kp KC_NO
                 &kp KC_NO &kp KC_NO &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P
-                &kp KC_A &kp KC_S &kp KC_NO &kp KC_D &kp KC_F &kp KC_G &mo 2
+                &kp KC_A &kp KC_S &kp KC_NO &kp KC_D &kp KC_F &kp KC_G &mo 1
                 &kp KC_NO &kp KC_H &kp KC_J &kp KC_NO &kp KC_K &kp KC_L &kp KC_MINUS
                 &kp KC_Z &kp KC_X &kp KC_C &kp KC_V &kp KC_NO &kp KC_B &mt KC_LSFT KC_SPC
-                &mo 3 &kp KC_N &kp KC_M &kp KC_COMMA &kp KC_DOT &kp KC_NO &kp KC_SLASH
+                &mo 2 &kp KC_N &kp KC_M &kp KC_COMMA &kp KC_DOT &kp KC_NO &kp KC_SLASH
                 &kp KC_NO &kp KC_LALT &mt KC_LGUI KC_TAB &kp KC_BSPC &kp KC_LCTRL
             >;
         };
 
-        layer_2 {
+        layer_1 {
             bindings = <
                 &kp KC_NO &kp KC_1 &kp KC_2 &kp KC_3 &kp KC_4 &kp KC_5 &kp KC_NO
                 &kp KC_NO &kp KC_NO &kp KC_6 &kp KC_7 &kp KC_8 &kp KC_9 &kp KC_0
@@ -30,7 +30,7 @@
             >;
         };
 
-        layer_3 {
+        layer_2 {
             bindings = <
                 &kp KC_NO &kp KC_F1 &kp KC_F2 &kp KC_F3 &kp KC_F4 &kp KC_F5 &kp KC_NO
                 &kp KC_NO &kp KC_NO &kp KC_F6 &kp KC_F7 &kp KC_F8 &kp KC_F9 &kp KC_F10
