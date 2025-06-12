@@ -1,0 +1,10 @@
+file_format: "1"
+id: meteorite40
+name: meteorite40
+type: shield
+url: https://github.com/iwk7273/zmk-config-meteorite40
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - pointing_device
+  - encoder
