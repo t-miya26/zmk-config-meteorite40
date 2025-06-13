@@ -1,2 +1,4 @@
+#include "meteorite40-config.dtsi" 
+
 / {
 };
