@@ -2,14 +2,14 @@
 #include "meteorite40-layout.dtsi"
 
 
-&meteorite40_physical_layout {
+&meteorite40_layout {
     transform = <&default_transform>;
 };
 
 / {
     chosen {
         zmk,kscan = &meteorite40_scan;
-        zmk,physical-layout = &meteorite40_physical_layout;
+        zmk,physical-layout = &meteorite40_layout;
         transform = <&default_transform>;
     };
 

@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    meteorite40_physical_layout: meteorite40_physical_layout {
+    meteorite40_layout: meteorite40_layout {
         compatible = "zmk,physical-layout";
         display-name = "meteorite40";
 
@@ -59,7 +59,7 @@
             <&key_physical_attrs 100 100  150  300  0  0  0>,
 
             // オプション：エンコーダー or キー（右端）
-            <&key_physical_attrs 100 100 1150  300  0  0  0>,
+            <&key_physical_attrs 100 100 1150  300  0  0  0>
         ;
     };
 };
