@@ -4,7 +4,7 @@
 
 &meteorite40_layout {
     transform = <&default_transform>;
-}:
+};
 
 / {
     chosen {
