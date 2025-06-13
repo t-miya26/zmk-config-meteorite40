@@ -1,3 +1,2 @@
 config SHIELD_METEORITE40
-    bool "meteorite40"
-    default y
+    def_bool $(shields_list_contains,meteorite40)
