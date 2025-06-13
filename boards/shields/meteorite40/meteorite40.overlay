@@ -1,4 +1,4 @@
-#include "meteorite40-config.dtsi" 
+#include "meteorite40.dtsi" 
 
 / {
 };
