@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    meteorite40_layout: meteorite40_layout {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "meteorite40";
 
