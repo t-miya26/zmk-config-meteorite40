@@ -48,14 +48,14 @@
             <&key_physical_attrs 100 100 1100  200  0  0  0>,
 
             // 4段目（中央8キー）
+            <&key_physical_attrs 100 100  200  300  0  0  0>,
             <&key_physical_attrs 100 100  300  300  0  0  0>,
-            <&key_physical_attrs 100 100  400  300  0  0  0>,
-            <&key_physical_attrs 100 100  500  300  0  0  0>,
-            <&key_physical_attrs 100 100  600  300  0  0  0>,
-            <&key_physical_attrs 100 100  700  300  0  0  0>,
-            <&key_physical_attrs 100 100  800  300  0  0  0>,
-            <&key_physical_attrs 100 100  900  300  0  0  0>,
-            <&key_physical_attrs 100 100 1000  300  0  0  0>
+            <&key_physical_attrs 125 100  400  300  0  0  0>,
+            <&key_physical_attrs 100 100  525  300  0  0  0>,
+            <&key_physical_attrs 100 100  625  300  0  0  0>,
+            <&key_physical_attrs 125 100  725  300  0  0  0>,
+            <&key_physical_attrs 100 100  850  300  0  0  0>,
+            <&key_physical_attrs 100 100  950  300  0  0  0>
         ;
     };
 };
