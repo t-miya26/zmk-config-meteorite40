@@ -1,6 +1,6 @@
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "meteorite40-layout.dtsi"
-
 
 &meteorite40_layout {
     transform = <&default_transform>;
