@@ -6,14 +6,6 @@
     transform = <&default_transform>;
 };
 
-&gpio0 {
-    nfc-pins-as-gpio;
-};
-
-&gpio1 {
-    nfc-pins-as-gpio;
-};
-
 / {
     chosen {
         zmk,kscan = &meteorite40_scan;
