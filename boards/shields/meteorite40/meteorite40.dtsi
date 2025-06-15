@@ -6,6 +6,56 @@
     transform = <&default_transform>;
 };
 
+&spi0 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    cs-gpios = <&gpio1 13 GPIO_ACTIVE_LOW>; // CS: P1.13
+
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    trackball: pmw3610@0 {
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio1 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // INT: P1.10
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        force-awake;
+        force-awake-4ms-mode;
+        status = "okay";
+    };
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,   // P0.09
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>, // P1.15
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>; // P1.14
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
+            low-power-enable;
+        };
+    };
+};
+
+&zmk {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
+};
+
 / {
     chosen {
         zmk,kscan = &meteorite40_scan;
@@ -62,55 +112,5 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder0 &encoder1>;
         triggers-per-rotation = <1>;
-    };
-
-    &spi0 {
-        status = "okay";
-        compatible = "nordic,nrf-spim";
-        cs-gpios = <&gpio1 13 GPIO_ACTIVE_LOW>; // CS: P1.13
-
-        pinctrl-0 = <&spi0_default>;
-        pinctrl-1 = <&spi0_sleep>;
-        pinctrl-names = "default", "sleep";
-
-        trackball: pmw3610@0 {
-            compatible = "pixart,pmw3610";
-            reg = <0>;
-            spi-max-frequency = <2000000>;
-            irq-gpios = <&gpio1 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // INT: P1.10
-            cpi = <600>;
-            evt-type = <INPUT_EV_REL>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            force-awake;
-            force-awake-4ms-mode;
-            status = "okay";
-        };
-    };
-
-    &pinctrl {
-        spi0_default: spi0_default {
-            group1 {
-                psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,   // P0.09
-                        <NRF_PSEL(SPIM_MOSI, 1, 15)>, // P1.15
-                        <NRF_PSEL(SPIM_MISO, 1, 14)>; // P1.14
-            };
-        };
-
-        spi0_sleep: spi0_sleep {
-            group1 {
-                psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,
-                        <NRF_PSEL(SPIM_MOSI, 1, 15)>,
-                        <NRF_PSEL(SPIM_MISO, 1, 14)>;
-                low-power-enable;
-            };
-        };
-    };
-
-    &zmk {
-        trackball_listener {
-            compatible = "zmk,input-listener";
-            device = <&trackball>;
-        };
     };
 };
