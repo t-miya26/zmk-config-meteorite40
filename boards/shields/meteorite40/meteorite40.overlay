@@ -1,4 +1,12 @@
 #include "meteorite40.dtsi" 
 
+&encoder0 {
+    status = "okay";
+};
+
+&encoder1 {
+    status = "okay";
+};
+
 / {
 };

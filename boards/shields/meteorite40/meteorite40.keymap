@@ -14,6 +14,10 @@
                 &kp Z  &kp X  &kp C  &kp V  &kp B  &mkp MB1 &mkp MB2  &kp N  &kp M  &kp COMMA &kp DOT &kp SLASH
                 &kp LCTRL &mt LGUI TAB &mt LSHIFT SPACE &lt 1 LANG1 &lt 2 LANG2 &lt 2 ENTER &lt 3 BSPC &kp RALT
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp LC(MINUS) LC(EQUAL)>,   // RE0: cmd + - / +
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;     // RE1: volume down/up
         };
 
         layer_1 {
