@@ -43,7 +43,7 @@
     };
 
     encoder0: ec11_0 {
-        compatible = "alps, ec11";
+        compatible = "alps,ec11";
         a-gpios = <&gpio1 0 (GPIO_PULL_UP)>;   // P1.00
         b-gpios = <&gpio0 16 (GPIO_PULL_UP)>;  // P0.16
         steps = <4>;
@@ -51,7 +51,7 @@
     };
 
     encoder1: ec11_1 {
-        compatible = "alps, ec11";
+        compatible = "alps,ec11";
         a-gpios = <&gpio0 10 (GPIO_PULL_UP)>;  // P0.10 (NFC)
         b-gpios = <&gpio0 9  (GPIO_PULL_UP)>;  // P0.09 (NFC)
         steps = <4>;
