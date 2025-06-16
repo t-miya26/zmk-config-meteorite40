@@ -1,5 +1,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/input_transform.h>
 #include "meteorite40-layout.dtsi"
 
 &meteorite40_layout {
@@ -143,7 +144,7 @@
         device = <&trackball>;
 
         scroll {
-            layers = <2>;  // ← Layer2 でスクロールモードに
+            layers = <2>;  // ← Layer2 でスクロールモード
             process-next;
             input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
                              , <&xy_scaler 1 50>  // 1/50
