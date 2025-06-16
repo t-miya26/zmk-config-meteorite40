@@ -142,7 +142,7 @@
     sensor_rotation: sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
-        rotation-angle = <320>; 
+        rotation-angle = <30>; 
     };
 
     trackball_listener {
