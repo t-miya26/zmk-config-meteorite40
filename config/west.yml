@@ -12,5 +12,8 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: iwk7273
       revision: main
+    - name: zmk-feature-sensor_rotation
+      remote: iwk7273
+      revision: main
   self:
     path: config
