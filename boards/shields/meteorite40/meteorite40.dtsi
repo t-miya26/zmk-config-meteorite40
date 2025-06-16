@@ -145,7 +145,7 @@
         scroll {
             layers = <2>;  // ← Layer2 でスクロールモードに
             process-next;
-            input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
+            input-processors = <&xy_transf (2)>
                              , <&xy_scaler 1 25>
                              , <&x_scaler 0 1>
                              , <&to_wheel>;
