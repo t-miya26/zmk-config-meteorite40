@@ -63,25 +63,15 @@
     };
 
     behaviors {
-        mt_custom: mt_custom {
+        mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "Hold Tap with quick-tap";
             #binding-cells = <2>;
-            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
         };
-
-        lt_custom: lt_custom {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Layer Tap with quick-tap";
-            #binding-cells = <2>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-        };
-    };
-
-    aliases {
-        mt = &mt_custom;
-        lt = &lt_custom;
     };
 
     transform_split_space: keymap_transform_split_space {
