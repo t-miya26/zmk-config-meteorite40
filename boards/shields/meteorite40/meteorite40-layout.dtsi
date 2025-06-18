@@ -121,12 +121,12 @@
         compatible = "zmk,physical-layout-position-map";
 
         split_space_map {
-            physical-layout = &LAYOUT_SPLIT_SPACE;
+            physical-layout = < &LAYOUT_SPLIT_SPACE >;
             positions = < 32 33 34 35 36 37 38 39 >;
         };
 
         2u_space_map {
-            physical-layout = &LAYOUT_2U_SPACE;
+            physical-layout = < &LAYOUT_2U_SPACE >;
             positions = < 32 33 34  35  37 38 39 >;
         };
     };
