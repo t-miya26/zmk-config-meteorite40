@@ -72,6 +72,16 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
+
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };        
     };
 
     transform_split_space: keymap_transform_split_space {
