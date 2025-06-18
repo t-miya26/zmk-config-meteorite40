@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    meteorite40_layout: meteorite40_layout {
+    layout_split_space: LAYOUT_SPLIT_SPACE {
         compatible = "zmk,physical-layout";
-        display-name = "meteorite40";
+        display-name = "Split Space";
 
         keys //                  w    h   x     y  rot rx ry 
             = 
@@ -55,11 +55,79 @@
             <&key_physical_attrs 100 100  600  300  0  0  0>,
             <&key_physical_attrs 125 100  700  300  0  0  0>,
             <&key_physical_attrs 100 100  825  300  0  0  0>,
-            <&key_physical_attrs 100 100  925  300  0  0  0>,
-
-            // ⬇️ ロータリーエンコーダー（左下・右下）
-            <&key_physical_attrs 100 100    0  400  0  0  0>,
-            <&key_physical_attrs 100 100 1100  400  0  0  0>             
+            <&key_physical_attrs 100 100  925  300  0  0  0>
         ;
+    };
+
+    layout_2u_space: LAYOUT_2U_SPACE {
+        compatible = "zmk,physical-layout";
+        display-name = "2U Space";
+
+        keys //                  w    h   x     y  rot rx ry 
+            = 
+            // 1段目 左5
+            <&key_physical_attrs 100 100    0    0  0  0  0>,
+            <&key_physical_attrs 100 100  100    0  0  0  0>,
+            <&key_physical_attrs 100 100  200    0  0  0  0>,
+            <&key_physical_attrs 100 100  300    0  0  0  0>,
+            <&key_physical_attrs 100 100  400    0  0  0  0>,
+            // 1段目 右5
+            <&key_physical_attrs 100 100  700    0  0  0  0>,
+            <&key_physical_attrs 100 100  800    0  0  0  0>,
+            <&key_physical_attrs 100 100  900    0  0  0  0>,
+            <&key_physical_attrs 100 100 1000    0  0  0  0>,
+            <&key_physical_attrs 100 100 1100    0  0  0  0>,
+
+            // 2段目 左5
+            <&key_physical_attrs 100 100    0  100  0  0  0>,
+            <&key_physical_attrs 100 100  100  100  0  0  0>,
+            <&key_physical_attrs 100 100  200  100  0  0  0>,
+            <&key_physical_attrs 100 100  300  100  0  0  0>,
+            <&key_physical_attrs 100 100  400  100  0  0  0>,
+            // 2段目 右5
+            <&key_physical_attrs 100 100  700  100  0  0  0>,
+            <&key_physical_attrs 100 100  800  100  0  0  0>,
+            <&key_physical_attrs 100 100  900  100  0  0  0>,
+            <&key_physical_attrs 100 100 1000  100  0  0  0>,
+            <&key_physical_attrs 100 100 1100  100  0  0  0>,
+
+            // 3段目 中央12
+            <&key_physical_attrs 100 100    0  200  0  0  0>,
+            <&key_physical_attrs 100 100  100  200  0  0  0>,
+            <&key_physical_attrs 100 100  200  200  0  0  0>,
+            <&key_physical_attrs 100 100  300  200  0  0  0>,
+            <&key_physical_attrs 100 100  400  200  0  0  0>,
+            <&key_physical_attrs 100 100  500  200  0  0  0>,
+            <&key_physical_attrs 100 100  600  200  0  0  0>,
+            <&key_physical_attrs 100 100  700  200  0  0  0>,
+            <&key_physical_attrs 100 100  800  200  0  0  0>,
+            <&key_physical_attrs 100 100  900  200  0  0  0>,
+            <&key_physical_attrs 100 100 1000  200  0  0  0>,
+            <&key_physical_attrs 100 100 1100  200  0  0  0>,
+
+            // 4段目
+            <&key_physical_attrs 100 100  175  300  0  0  0>,
+            <&key_physical_attrs 100 100  275  300  0  0  0>,
+            <&key_physical_attrs 125 100  375  300  0  0  0>,
+            <&key_physical_attrs 200 100  500  300  0  0  0>,
+            //<&key_physical_attrs 100 100  600  300  0  0  0>,
+            <&key_physical_attrs 125 100  700  300  0  0  0>,
+            <&key_physical_attrs 100 100  825  300  0  0  0>,
+            <&key_physical_attrs 100 100  925  300  0  0  0>
+        ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        split_space_map {
+            physical-layout = &layout_split_space;
+            positions = < 32 33 34 35 36 37 38 39 >;
+        };
+
+        2u_space_map {
+            physical-layout = &layout_2u_space;
+            positions = < 32 33 34  35  37 38 39 >;
+        };
     };
 };
