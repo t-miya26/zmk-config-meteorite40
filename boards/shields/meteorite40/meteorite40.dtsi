@@ -58,7 +58,7 @@
 
     chosen {
         zmk,kscan = &meteorite40_scan;
-        zmk,physical-layout = &layout_split_space;
+        zmk,physical-layout = &LAYOUT_SPLIT_SPACE;
         //transform = <&default_transform>;
     };
 
