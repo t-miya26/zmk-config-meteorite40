@@ -127,7 +127,7 @@
 
         2u_space_map {
             physical-layout = < &LAYOUT_2U_SPACE >;
-            positions = < 32 33 34  35  37 38 39 >;
+            positions = < 32 33 34 35 39 36 37 38 >;
         };
     };
 };
