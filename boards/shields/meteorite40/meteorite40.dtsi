@@ -5,10 +5,12 @@
 
 &LAYOUT_SPLIT_SPACE {
     transform = <&transform_split_space>;
+    quick-tap-ms = <150>;
 };
 
 &LAYOUT_2U_SPACE {
     transform = <&transform_2u_space>;
+    quick-tap-ms = <150>;
 };
 
 &spi0 {
@@ -178,4 +180,14 @@
                              , <&to_wheel>;
         };
     };
+};
+
+# Add quick-tap-ms setting for &mt
+&mt {
+    quick-tap-ms = <150>;
+};
+
+# Add quick-tap-ms setting for &lt
+&lt {
+    quick-tap-ms = <150>;
 };
