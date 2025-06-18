@@ -5,12 +5,10 @@
 
 &LAYOUT_SPLIT_SPACE {
     transform = <&transform_split_space>;
-    quick-tap-ms = <150>;
 };
 
 &LAYOUT_2U_SPACE {
     transform = <&transform_2u_space>;
-    quick-tap-ms = <150>;
 };
 
 &spi0 {
@@ -62,6 +60,28 @@
         zmk,kscan = &meteorite40_scan;
         zmk,physical-layout = &LAYOUT_SPLIT_SPACE;
         //transform = <&default_transform>;
+    };
+
+    behaviors {
+        mt_custom: mt_custom {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold Tap with quick-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <150>;
+        };
+
+        lt_custom: lt_custom {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer Tap with quick-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+        };
+    };
+
+    aliases {
+        mt = &mt_custom;
+        lt = &lt_custom;
     };
 
     transform_split_space: keymap_transform_split_space {
@@ -180,14 +200,4 @@
                              , <&to_wheel>;
         };
     };
-};
-
-# Add quick-tap-ms setting for &mt
-&mt {
-    quick-tap-ms = <150>;
-};
-
-# Add quick-tap-ms setting for &lt
-&lt {
-    quick-tap-ms = <150>;
 };
