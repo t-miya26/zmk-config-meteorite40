@@ -184,6 +184,11 @@
         rotation-angle = <30>; 
     };
 
+    xy_clipper: xy_clipper {
+        compatible = "zmk,input-processor-xy-clipper";
+        #input-processor-cells = <0>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -196,7 +201,7 @@
             input-processors = <&sensor_rotation>
                              , <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
                              , <&xy_scaler 1 50>  // 1/50
-             //              , <&x_scaler 0 1>
+                             , <&xy_clipper>
                              , <&to_wheel>;
         };
     };
