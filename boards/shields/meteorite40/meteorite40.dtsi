@@ -188,8 +188,8 @@
         compatible = "zmk,input-processor-xy-clipper";
         #input-processor-cells = <0>;
         threshold = <25>;
-        invert-x = <0>;
-        invert-y = <1>;
+        invert-x;
+        invert-y;
     };
 
     trackball_listener {
