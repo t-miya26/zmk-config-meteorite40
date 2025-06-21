@@ -4,6 +4,12 @@
 #include "meteorite40-layout.dtsi"
 
 
+#define DEFAULT_CPI 1000
+#define ROTATION_ANGLE 30
+#define CLIPPER_THRESHOLD 40
+#define INVERT_X 1
+#define INVERT_Y 0
+
 #define POLL_PERIOD_MS 20
 
 &LAYOUT_SPLIT_SPACE {
@@ -28,12 +34,12 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // MOTION: P1.12 ← 修正
-        cpi = <1000>;
+        cpi = <DEFAULT_CPI>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        force-awake;
-        force-awake-4ms-mode;
+        //force-awake;
+        //force-awake-4ms-mode;
         status = "okay";
     };
 };
@@ -184,15 +190,15 @@
     sensor_rotation: sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
-        rotation-angle = <30>; 
+        rotation-angle = <ROTATION_ANGLE>;
     };
 
     xy_clipper: xy_clipper {
         compatible = "zmk,input-processor-xy-clipper";
         #input-processor-cells = <0>;
-        threshold = <40>;
-        invert-x = <1>;
-        invert-y = <0>;
+        threshold = <CLIPPER_THRESHOLD>;
+        invert-x = <INVERT_X>;
+        invert-y = <INVERT_Y>;
     };
 
     trackball_listener {
