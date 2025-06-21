@@ -14,7 +14,7 @@
 
 / {
     led_off: led_off {
-        gpios = <&gpio0 13 GPIO_OUTPUT_LOW>;
+        control-gpios = <&gpio0 13 GPIO_OUTPUT_LOW>;
         status = "okay";
     };
 };
