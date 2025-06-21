@@ -200,7 +200,7 @@
 
         scroll {
             layers = <2>;  /*Layer2 でスクロールモード */
-            process-next;
+            //process-next;
             input-processors = <&xy_clipper>, <&to_wheel>;
         };
     };
