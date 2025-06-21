@@ -8,5 +8,13 @@
     status = "okay";
 };
 
+&i2c0 {
+    status = "disabled";
+};
+
 / {
+    led_off: led_off {
+        gpios = <&gpio0 13 GPIO_OUTPUT_LOW>;
+        status = "okay";
+    };
 };
