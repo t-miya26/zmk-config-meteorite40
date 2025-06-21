@@ -186,10 +186,7 @@
 
     xy_clipper: xy_clipper {
         compatible = "zmk,input-processor-xy-clipper";
-        #input-processor-cells = <0>;
-        threshold = <25>;
-        invert-x = <false>;
-        invert-y = <true>;
+        #input-processor-cells = <3>;  // threshold, invert-x, invert-y
     };
 
     trackball_listener {
@@ -201,8 +198,7 @@
         scroll {
             layers = <2>;  /*Layer2 でスクロールモード */
             process-next;
-            input-processors = <&xy_clipper>,
-                               <&to_wheel>;
+            input-processors = <&xy_clipper 25 0 1>, <&to_wheel>; // // threshold, invert-x, invert-y
         };
     };
 };
