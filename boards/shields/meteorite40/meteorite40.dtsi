@@ -196,13 +196,10 @@
         input-processors = <&sensor_rotation>;
 
         scroll {
-            layers = <2>;  // ← Layer2 でスクロールモード
+            layers = <2>;  /*Layer2 でスクロールモード */
             process-next;
-            input-processors = //<&sensor_rotation>,
-                               //<&xy_transf (INPUT_TRANSFORM_X_INVERT)>,
-                               //<&xy_scaler 1 50>,  // 1/50
-                               <&xy_clipper>;
-                               //<&to_wheel>;
+            input-processors = <&xy_clipper>,
+                               <&to_wheel>;
         };
     };
 };
