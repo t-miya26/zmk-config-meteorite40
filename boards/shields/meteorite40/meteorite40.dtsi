@@ -198,7 +198,8 @@
         scroll {
             layers = <2>;  /*Layer2 でスクロールモード */
             process-next;
-            input-processors = <&xy_clipper 25 0 1>, <&to_wheel>; // // threshold, invert-x, invert-y
+            input-processors = <&xy_clipper 25 0 1>, //threshold, invert-x, invert-y
+                               <&to_wheel>; 
         };
     };
 };
