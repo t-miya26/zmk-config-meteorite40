@@ -25,7 +25,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // MOTION: P1.12 ← 修正
-        cpi = <900>;
+        cpi = <1000>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -188,8 +188,8 @@
         compatible = "zmk,input-processor-xy-clipper";
         #input-processor-cells = <0>;
         threshold = <25>;
-        invert-x;
-        //invert-y;
+        invert-x = <1>;
+        invert-y = <0>;
     };
 
     trackball_listener {
@@ -200,7 +200,9 @@
 
         scroll {
             layers = <2>;  /*Layer2 でスクロールモード */
-            input-processors = <&xy_clipper>, <&to_wheel>;
+            input-processors = <&sensor_rotation>,
+                               <&xy_clipper>,
+                               <&to_wheel>;
         };
     };
 };
