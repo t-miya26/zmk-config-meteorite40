@@ -189,7 +189,7 @@
         #input-processor-cells = <0>;
         threshold = <25>;
         invert-x;
-        invert-y;
+        //invert-y;
     };
 
     trackball_listener {
@@ -200,7 +200,6 @@
 
         scroll {
             layers = <2>;  /*Layer2 でスクロールモード */
-            //process-next;
             input-processors = <&xy_clipper>, <&to_wheel>;
         };
     };
