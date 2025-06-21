@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "meteorite40-layout.dtsi"
 
+
+#define POLL_PERIOD_MS 20
+
 &LAYOUT_SPLIT_SPACE {
     transform = <&transform_split_space>;
 };
@@ -121,7 +124,7 @@
         interrupt-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         debounce-press-ms = <5>;
         debounce-release-ms = <5>;
-        poll-period-ms = <10>;
+        poll-period-ms = <POLL_PERIOD_MS>;
         wakeup-source;
     };
 
