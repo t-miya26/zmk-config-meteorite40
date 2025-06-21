@@ -187,6 +187,9 @@
     xy_clipper: xy_clipper {
         compatible = "zmk,input-processor-xy-clipper";
         #input-processor-cells = <0>;
+        threshold = <25>;
+        invert-x = <false>;
+        invert-y = <true>;
     };
 
     trackball_listener {
