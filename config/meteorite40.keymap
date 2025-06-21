@@ -74,19 +74,5 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;     // RE1: volume down/up
 
         };
-
-        combos {
-            combo_lang1 {
-                timeout-ms = <50>;
-                key-positions = <13 12>; // F, D
-                bindings = <&kp LANG1>;
-            };
-
-            combo_lang2 {
-                timeout-ms = <50>;
-                key-positions = <16 17>; // J, K
-                bindings = <&kp LANG2>;
-            };
-        };
     };
 };
