@@ -51,7 +51,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        //force-awake;
+        force-awake;
         //force-awake-4ms-mode;
         status = "okay";
     };
@@ -257,7 +257,7 @@
         input-processors = <&sensor_rotation>;
 
         scroll {
-            layers = <SCROLL_LAYER>;  /*Layer2 でスクロールモード */
+            layers = <SCROLL_LAYER>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
                                <&to_wheel>;
