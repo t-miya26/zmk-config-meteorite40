@@ -36,7 +36,7 @@
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    cs-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>; // CS: P1.15 ← 修正
+    cs-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>; // CS: P1.15
 
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
@@ -46,7 +46,7 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // MOTION: P1.12 ← 修正
+        irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // MOTION: P1.12
         cpi = <DEFAULT_CPI>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -60,9 +60,9 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,   // SCLK:  P1.13 ← 修正
-                    <NRF_PSEL(SPIM_MOSI, 1, 14)>,  // SDIO:  P1.14 ← 修正
-                    <NRF_PSEL(SPIM_MISO, 1, 14)>;  // MISOは同じSDIO兼用 ← 保持（PMW3610はSDIOのみ使用）
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,   // SCLK:  P1.13
+                    <NRF_PSEL(SPIM_MOSI, 1, 14)>,  // SDIO:  P1.14
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;  // MISOは同じSDIO兼用
         };
     };
 
@@ -76,6 +76,18 @@
     };
 };
 
+&mt { 
+    flavor = "tap-preferred"; // change hold to tap
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>; // change 200 to 150
+};
+
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>; // change 200 to 150
+    quick-tap-ms = <150>; // change 200 to 150
+};
+
 / {
 
     chosen {
@@ -84,6 +96,7 @@
         //transform = <&default_transform>;
     };
 
+    /*
     behaviors {
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -105,6 +118,7 @@
             display-name = "Layer-Tap";
         };        
     };
+    */
 
     transform_split_space: keymap_transform_split_space {
         compatible = "zmk,matrix-transform";
