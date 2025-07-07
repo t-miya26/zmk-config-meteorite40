@@ -90,7 +90,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred"; // change hold to tap
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <100>; // change 200 to 100
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
@@ -100,7 +100,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;// change 200 to 150
-            quick-tap-ms = <200>;
+            quick-tap-ms = <200>; // change 200 to 100
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };        
