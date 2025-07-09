@@ -4,14 +4,14 @@
 #include "meteorite40-layout.dtsi"
 
 
-#define DEFAULT_CPI 1000
-#define ROTATION_ANGLE 30
-#define CLIPPER_THRESHOLD 40
-#define INVERT_X 1
-#define INVERT_Y 0
-#define SCROLL_LAYER 1
+#define DEFAULT_CPI 1000        // トラックボールの感度
+#define ROTATION_ANGLE 30       // トラックボールの軸を回転
+#define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
+#define INVERT_X 1              // スクロールの反転
+#define INVERT_Y 0              // スクロールの反転
+#define SCROLL_LAYER 1          // スクロールを有効にするレイヤー
 
-#define POLL_PERIOD_MS 20
+#define POLL_PERIOD_MS 30       // キースキャンのポーリング周期
 
 &LAYOUT_SPLIT_SPACE {
     transform = <&transform_split_space>;
@@ -51,7 +51,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        force-awake;
+        //force-awake;
         //force-awake-4ms-mode;
         status = "okay";
     };
@@ -83,30 +83,6 @@
         zmk,physical-layout = &LAYOUT_SPLIT_SPACE;
         //transform = <&default_transform>;
     };
-
-    /*
-    behaviors {
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred"; // change hold to tap
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>; // change 200 to 100
-            bindings = <&kp>, <&kp>;
-            display-name = "Mod-Tap";
-        };
-
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;// change 200 to 150
-            quick-tap-ms = <200>; // change 200 to 100
-            bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap";
-        };        
-    };
-    */
 
     transform_split_space: keymap_transform_split_space {
         compatible = "zmk,matrix-transform";
@@ -207,6 +183,7 @@
         triggers-per-rotation = <1>;
     };
 
+    /*
     xy_transf: xy_transf {
         compatible = "zmk,input-processor-transform";
         #input-processor-cells = <1>;
@@ -229,6 +206,7 @@
         type = <INPUT_EV_REL>;
         codes = <INPUT_REL_X>;
     };
+    */
 
     to_wheel: to_wheel {
         compatible = "zmk,input-processor-code-mapper";
