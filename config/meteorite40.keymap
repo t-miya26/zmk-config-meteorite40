@@ -73,6 +73,7 @@
         layout = &LAYOUT_2U_SPACE;
 
         mac_default_layer {
+            display-name = "MAC BASE";
             bindings = <
                 &kp Q      &kp W         &kp E             &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O  &kp P
                 &mt LSFT A &kp S         &kp D             &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L  &kp MINUS
@@ -86,6 +87,7 @@
         };
 
         win_default_layer {
+            display-name = "WIN BASE";
             bindings = <
                 &kp Q      &kp W         &kp E             &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O  &kp P
                 &mt LSFT A &kp S         &kp D             &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L  &kp MINUS
@@ -99,6 +101,7 @@
         };
 
         layer_2 {
+            display-name = "SYMBOLS";
             bindings = <
                 &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                       &none      &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT
                 &kp CARET  &kp AMPS  &kp STAR  &kp BSLH  &kp PIPE                        &kp SEMI   &kp COLON  &kp SQT    &kp DQT    &kp EQUAL
@@ -113,6 +116,7 @@
         };
 
         layer_3 {
+            display-name = "NUM / ARROW";
             bindings = <
                 &kp ASTRK        &kp N7     &kp N8     &kp N9     &kp PLUS                        &none   &none     &none   &none     &none
                 &kp SLASH        &kp N4     &kp N5     &kp N6     &kp MINUS                       &none   &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT
@@ -127,6 +131,7 @@
         };
 
         layer_4 {
+            display-name = "FUNCTION";
             bindings = <
                 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
                 &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none
@@ -141,6 +146,7 @@
         };
 
         layer_5 {
+            display-name = "SETTING";
             bindings = <
                 &bootloader  &none   &none   &to 0   &to 1                                 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
                 &none        &none   &none   &none   &none                                 &bt BT_CLR_ALL  &none         &none         &none         &none
