@@ -9,7 +9,7 @@
 #define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
 #define INVERT_X 1              // スクロールの反転
 #define INVERT_Y 0              // スクロールの反転
-#define SCROLL_LAYER 1         // スクロールを有効にするレイヤー
+#define SCROLL_LAYER 2         // スクロールを有効にするレイヤー
 
 #define POLL_PERIOD_MS 30       // キースキャンのポーリング周期
 
