@@ -11,7 +11,8 @@
 #define INVERT_Y 0              // スクロールの反転
 #define SCROLL_LAYER 2         // スクロールを有効にするレイヤー
 
-#define POLL_PERIOD_MS 30       // キースキャンのポーリング周期
+#define POLL_PERIOD_MS 30       // キースキャンのポーリング周期（ms）
+#define DEBOUNCE_MS 10          // デバウンス時間 (ms)
 
 &LAYOUT_SPLIT_SPACE {
     transform = <&transform_split_space>;
@@ -155,8 +156,8 @@
                 <&gpio1 11 GPIO_ACTIVE_HIGH>; // ID6: P1.11
 
         interrupt-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Changed to P0.09 (NFC1)
-        debounce-press-ms = <5>;
-        debounce-release-ms = <5>;
+        debounce-press-ms = <DEBOUNCE_MS>;
+        debounce-release-ms = <DEBOUNCE_MS>;
         poll-period-ms = <POLL_PERIOD_MS>;
         wakeup-source;
     };
