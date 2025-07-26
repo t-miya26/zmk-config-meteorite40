@@ -56,6 +56,23 @@
 };
 
 / {
+    meteorite40_scan: kscan0 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>,  // ID0: P0.02
+                <&gpio0 3 GPIO_ACTIVE_HIGH>,  // ID1: P0.03
+                <&gpio0 28 GPIO_ACTIVE_HIGH>, // ID2: P0.28
+                <&gpio0 29 GPIO_ACTIVE_HIGH>, // ID3: P0.29
+                <&gpio0 4 GPIO_ACTIVE_HIGH>,  // ID4: P0.04
+                <&gpio0 5 GPIO_ACTIVE_HIGH>,  // ID5: P0.05
+                <&gpio1 11 GPIO_ACTIVE_HIGH>; // ID6: P1.11
+
+        interrupt-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Changed to P0.09 (NFC1)
+        debounce-press-ms = <DEBOUNCE_MS>;
+        debounce-release-ms = <DEBOUNCE_MS>;
+        poll-period-ms = <POLL_PERIOD_MS>;
+        wakeup-source;
+    };
+    
     /*
     xy_transf: xy_transf {
         compatible = "zmk,input-processor-transform";

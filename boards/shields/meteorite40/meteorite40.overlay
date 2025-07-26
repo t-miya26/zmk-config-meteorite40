@@ -88,6 +88,7 @@
         >;
     };
 
+    /*
     meteorite40_scan: kscan0 {
         compatible = "zmk,kscan-gpio-charlieplex";
         gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>,  // ID0: P0.02
@@ -104,6 +105,7 @@
         poll-period-ms = <POLL_PERIOD_MS>;
         wakeup-source;
     };
+    */
 
     encoder0: ec11_0 {
         compatible = "alps,ec11";
