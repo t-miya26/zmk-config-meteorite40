@@ -1,2 +1,5 @@
 config SHIELD_METEORITE40
     def_bool $(shields_list_contains,meteorite40)
+
+config SHIELD_METEORITE40_LOW
+    def_bool $(shields_list_contains,meteorite40_low)
