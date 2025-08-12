@@ -88,7 +88,7 @@
                 &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                       &none      &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT
                 &kp CARET  &kp AMPS  &kp STAR  &kp BSLH  &kp PIPE                        &kp SEMI   &kp COLON  &kp SQT    &kp DQT    &kp EQUAL
                 &none      &none     &none     &none     &none      &mkp MB4  &mkp MB5   &kp GRAVE  &kp TILDE  &kp LBRC   &kp RBRC   &kp PLUS
-                                     &trans     &trans    &trans    &trans    &trans     &trans    &kp DEL     &trans
+                                     &trans     &trans    &trans    &trans    &trans     &kp DEL    &trans     &trans
             >;
         };
 
