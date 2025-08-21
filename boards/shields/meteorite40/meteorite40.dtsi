@@ -131,7 +131,9 @@
             layers = <SCROLL_LAYER>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
-                               <&to_wheel>;
+                               <&zip_xy_to_scroll_mapper>;
+                               //<&to_wheel>;
+
         };
     };
 };
