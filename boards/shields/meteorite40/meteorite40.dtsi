@@ -130,9 +130,11 @@
         scroll {
             layers = <SCROLL_LAYER>;
             input-processors = <&sensor_rotation>,
-                               <&xy_clipper>,
+                               <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, 
+                               //<&xy_clipper>,
                                //<&zip_xy_to_scroll_mapper>;
-                               <&to_wheel>;
+                               <&to_wheel>,
+                               <&zip_scroll_scaler 1 5>;
 
         };
     };
