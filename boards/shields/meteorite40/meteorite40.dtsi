@@ -6,12 +6,12 @@
 #define DEFAULT_CPI 1000        // トラックボールの感度
 #define ROTATION_ANGLE 30       // トラックボールのY軸を回転
 #define CLIPPER_THRESHOLD 30    // スクロール時に斜めの値をクリップ
-#define INVERT_X 1              // スクロールの反転
-#define INVERT_Y 0              // スクロールの反転
+#define INVERT_X 1              // X軸のスクロールの反転
+#define INVERT_Y 0              // Y軸のスクロールの反転
 #define SCROLL_LAYER 2         // スクロールを有効にするレイヤー
 
-#define POLL_PERIOD_MS 30       // キースキャンのポーリング周期（ms）
-#define DEBOUNCE_MS 5          // デバウンス時間 (ms)
+#define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
+#define DEBOUNCE_MS 7          // デバウンス時間 (ms)
 
 
 &spi0 {
@@ -132,8 +132,8 @@
             layers = <SCROLL_LAYER>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
-                               <&zip_xy_to_scroll_mapper>;
-                               //<&to_wheel>;
+                               //<&zip_xy_to_scroll_mapper>;
+                               <&to_wheel>;
 
         };
     };
