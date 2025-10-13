@@ -107,6 +107,15 @@
               <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
 
+    scaler0: scaler@0 {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <0>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+        scaling-mode = <1>;           // 1: enable scaling, 0: passthrough
+        scale-coeff-milli = <100>;    // default 0.1
+    };
+
     sensor_rotation: sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
@@ -125,7 +134,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&sensor_rotation>;
+        input-processors = <&sensor_rotation>, <&scaler0>;
 
         scroll {
             layers = <SCROLL_LAYER>;
