@@ -111,7 +111,7 @@
               <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
 
-    motion_scaler: motion_scaler {
+    motion_scaler0: motion_scaler {
         compatible = "zmk,input-processor-motion-scaler";
         #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
