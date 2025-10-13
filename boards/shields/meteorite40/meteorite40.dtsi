@@ -6,15 +6,16 @@
 #define DEFAULT_CPI 1000        // トラックボールの感度
 #define ROTATION_ANGLE 30       // トラックボールのY軸を回転
 #define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
+
+#define SCROLL_LAYER 2          // スクロールを有効にするレイヤー
 #define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
-#define SCROLL_LAYER 2         // スクロールを有効にするレイヤー
-#define SCALING_MODE 1              // 0: 無効, 1: 有効
-#define SCALE_COEFF_MILLI 100       // 係数(ミリ単位) 例: 100 -> 0.1
+#define SCALING_MODE 1          // 0: 無効, 1: 有効
+#define SCALE_COEFF_MILLI 100   // 係数(ミリ単位) 例: 100 -> 0.1
 
 #define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
-#define DEBOUNCE_MS 7          // デバウンス時間 (ms)
+#define DEBOUNCE_MS 7           // デバウンス時間 (ms)
 
 &spi0 {
     status = "okay";
