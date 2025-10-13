@@ -136,7 +136,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&sensor_rotation>, <&motion_scaler>;
+        input-processors = <&sensor_rotation>, <&motion_scaler0>;
 
         scroll {
             layers = <SCROLL_LAYER>;
