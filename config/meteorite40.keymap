@@ -45,50 +45,50 @@
 		};
 
         //win only
-		home {
+		home_win {
 			bindings = <&kp HOME>;
 			key-positions = <16 17>; /* J + K (on layer 2) */
 			layers = <2>;
 		};
 
-		end {
+		end_win {
 			bindings = <&kp END>;
 			key-positions = <18 19>; /* L + - (on layer 2) */
 			layers = <2>;
 		};
 
-		ctrl_home {
+		ctrl_home_win {
 			bindings = <&kp LC(HOME)>;
 			key-positions = <16 18>; /* J + L (on layer 2) */
 			layers = <2>;
 		};
 
-		ctrl_end {
+		ctrl_end_win {
 			bindings = <&kp LC(END)>;
 			key-positions = <17 19>; /* K + - (on layer 2) */
 			layers = <2>;
 		};
 
         //mac only
-		home {
+		home_mac {
 			bindings = <&kp LG(LEFT)>;
 			key-positions = <16 17>; /* J + K (on layer 6) */
 			layers = <6>;
 		};
 
-		end {
+		end_mac {
 			bindings = <&kp LG(RIGHT)>;
 			key-positions = <18 19>; /* L + - (on layer 6) */
 			layers = <6>;
 		};
 
-		ctrl_home {
+		ctrl_home_mac {
 			bindings = <&kp LG(UP)>;
 			key-positions = <16 18>; /* J + L (on layer 6) */
 			layers = <6>;
 		};
 
-		ctrl_end {
+		ctrl_end_mac {
 			bindings = <&kp LG(DOWN)>;
 			key-positions = <17 19>; /* K + - (on layer 6) */
 			layers = <6>;
