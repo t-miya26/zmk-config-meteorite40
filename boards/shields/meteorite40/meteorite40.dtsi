@@ -113,7 +113,7 @@
 
     scaler0: scaler@0 {
         compatible = "zmk,input-processor-motion-scaler";
-        #input-processor-cells = <2>;
+        #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
         scale-coeff-milli = <SCALE_COEFF_MILLI>;
     };
