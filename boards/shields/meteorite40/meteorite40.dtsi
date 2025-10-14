@@ -116,6 +116,7 @@
         #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
         scale-coeff-milli = <SCALE_COEFF_MILLI>;
+        track-remainders;
     };
 
     sensor_rotation: sensor_rotation {
