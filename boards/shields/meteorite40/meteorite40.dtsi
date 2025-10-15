@@ -11,7 +11,7 @@
 #define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
-#define SCALING_MODE 1          // 0: 無効, 1: 有効
+#define SCALING_MODE 0          // 0: 無効, 1: 有効
 #define SCALE_COEFF_MILLI 50   // 係数 例: 100 -> 0.1
  
 #define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
