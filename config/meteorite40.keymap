@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-macro";
             label = "BT0_WIN";
             #binding-cells = <0>;
-            wait-ms = <10>;             // ← ここを追加
+            wait-ms = <10>;
             bindings = <&bt BT_SEL 0>, <&to 0>;
         };
 
@@ -29,7 +29,7 @@
             compatible = "zmk,behavior-macro";
             label = "BT1_MAC";
             #binding-cells = <0>;
-            wait-ms = <10>;             // ← ここを追加
+            wait-ms = <10>;
             bindings = <&bt BT_SEL 1>, <&to 3>;
         };
     };
