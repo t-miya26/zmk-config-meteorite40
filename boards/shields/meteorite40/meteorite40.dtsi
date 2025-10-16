@@ -7,7 +7,8 @@
 #define ROTATION_ANGLE 30       // トラックボールのY軸を回転
 #define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
 
-#define SCROLL_LAYER 2          // スクロールを有効にするレイヤー
+#define SCROLL_LAYER_1 2          // スクロールを有効にするレイヤー1
+#define SCROLL_LAYER_2 3          // スクロールを有効にするレイヤー2
 #define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
@@ -141,7 +142,7 @@
                            <&motion_scaler>;
 
         scroll {
-            layers = <SCROLL_LAYER>;
+            layers = <SCROLL_LAYER_1 SCROLL_LAYER_2>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
                                <&to_wheel>;
