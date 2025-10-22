@@ -8,7 +8,7 @@
 #define CLIPPER_THRESHOLD 100    // スクロール時に斜めの値をクリップ
 
 #define SCROLL_LAYER 2          // スクロールを有効にするレイヤー
-#define INVERT_X 1              // X軸のスクロールの反転
+#define INVERT_X 0              // X軸のスクロールの反転
 #define INVERT_Y 1              // Y軸のスクロールの反転
 
 #define SCALING_MODE 1          // 0: 無効, 1: 有効
