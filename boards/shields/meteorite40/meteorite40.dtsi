@@ -5,14 +5,14 @@
 
 #define DEFAULT_CPI 650        // トラックボールの感度
 #define ROTATION_ANGLE 30       // トラックボールのY軸を回転
-#define CLIPPER_THRESHOLD 100    // スクロール時に斜めの値をクリップ
+#define CLIPPER_THRESHOLD 50    // スクロール時に斜めの値をクリップ
 
 #define SCROLL_LAYER 2          // スクロールを有効にするレイヤー
 #define INVERT_X 0              // X軸のスクロールの反転
 #define INVERT_Y 1              // Y軸のスクロールの反転
 
 #define SCALING_MODE 1          // 0: 無効, 1: 有効
-#define SCALE_COEFF_MILLI 50   // 係数 例: 100 -> 0.1
+#define SCALE_COEFF_MILLI 30   // 係数 例: 100 -> 0.1
  
 #define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
 #define DEBOUNCE_MS 7           // デバウンス時間 (ms)
