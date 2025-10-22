@@ -3,31 +3,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+};
 
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
+};
 
 / {
     behaviors {
-        /* ▼ Mod-Tap: &mt … で参照 */
-        mt: behavior_mod_tap {
-            compatible = "zmk,behavior-mod-tap";
-            label = "MT";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-        };
-
-        /* ▼ Layer-Tap: &lt … で参照 */
-        lt: behavior_layer_tap {
-            compatible = "zmk,behavior-layer-tap";
-            label = "LT";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
-        };
-
-        /* ▼ エンコーダ → スクロール */
         rot_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -35,8 +24,6 @@
         };
     };
 };
-
-
 
 / {
     combos {
