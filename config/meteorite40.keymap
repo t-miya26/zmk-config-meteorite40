@@ -19,9 +19,10 @@
     combos {
         compatible = "zmk,combos";
 
-        MB3 {
+        mb3 {
             bindings = <&mkp MB3>;
             key-positions = <25 26>;
+            layers = <0>;
         };
     };
 
@@ -40,9 +41,10 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
-                // RE0: ctrl + - / +,,,,
+                // RE0: ctrl + - / +,,,,,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
- // RE1: volume down/up
+
+            // RE1: volume down/up
         };
 
         layer_1 {
@@ -56,9 +58,10 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
-                // RE0: ctrl + - / +,,,,
+                // RE0: ctrl + - / +,,,,,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
- // RE1: volume down/up
+
+            // RE1: volume down/up
         };
 
         layer_2 {
@@ -72,9 +75,10 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
-                // RE0: ctrl + - / +,,,,
+                // RE0: ctrl + - / +,,,,,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
- // RE1: volume down/up
+
+            // RE1: volume down/up
         };
 
         layer_3 {
@@ -88,9 +92,10 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
-                // RE0: ctrl + - / +,,,,
+                // RE0: ctrl + - / +,,,,,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
- // RE1: volume down/up
+
+            // RE1: volume down/up
         };
 
         layer_4 {
@@ -104,9 +109,10 @@
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
-                // RE0: ctrl + - / +,,,,
+                // RE0: ctrl + - / +,,,,,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
- // RE1: volume down/up
+
+            // RE1: volume down/up
         };
     };
 };
