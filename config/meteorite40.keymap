@@ -32,7 +32,7 @@
             label = "PW";
         };
 
-};
+    };
 
 / {
     combos {
@@ -69,7 +69,7 @@
             bindings = <
 &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6   &kp NUMBER_7      &kp NUMBER_8      &kp NUMBER_9   &kp NUMBER_0
 &kp EQUAL             &kp LS(0x89)  &kp 0x87      &kp F10       &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LEFT_BRACKET  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp PLUS
-&mt LEFT_SHIFT F1     &kp F2        &kp F3        &kp F4        &kp F5             &mkp MB4       &mkp MB5          &kp F6            &kp F7         &kp F8        &kp F9  &kp F10
+&mt LEFT_SHIFT F1     &kp F2        &kp F3        &kp F4        &kp F5             &mkp MB1       &mkp MB2          &kp F6            &kp F7         &kp F8        &kp F9  &kp F10
 &trans                &trans        &trans        &trans        &trans             &trans         &trans            &trans
             >;
 
