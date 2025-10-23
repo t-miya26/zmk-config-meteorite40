@@ -23,6 +23,15 @@
             bindings = <&msc>, <&msc>;
         };
     };
+
+    macros {
+        pw: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp H &kp I &kp K &kp I &kp N1 &kp N1 &kp N2 &kp N6 &kp N1 &kp N1 &kp LEFT_BRACKET>;
+            label = "PW";
+        };
+
 };
 
 / {
@@ -111,7 +120,7 @@
             bindings = <
 &bootloader  &none   &none   &none   &none   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none        &none   &none   &none   &none   &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none
-&none        &none   &none   &none   &none   &none         &none           &none         &none         &none         &none  &none
+&none        &none   &none   &none   &none   &none         &none           &none         &none         &none         &none  &pw
 &trans       &trans  &trans  &trans  &trans  &trans        &trans          &trans
             >;
 
