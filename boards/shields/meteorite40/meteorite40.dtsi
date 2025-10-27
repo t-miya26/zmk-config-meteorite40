@@ -149,6 +149,7 @@
             layers = <SCROLL_LAYER_1 SCROLL_LAYER_2>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
+                               <&motion_scaler>,
                                <&to_wheel>;
         };
     };
