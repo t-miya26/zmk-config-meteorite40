@@ -115,7 +115,7 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-		layout = &LAYOUT_2U_SPACE;
+		layout = &LOW_PROFILE_DEFAULT;
 
 		win_base {
 			display-name = "WIN BASE";
