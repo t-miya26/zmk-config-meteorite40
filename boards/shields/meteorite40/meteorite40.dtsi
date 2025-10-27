@@ -9,7 +9,7 @@
 
 #define SCROLL_LAYER_1 2          // スクロールを有効にするレイヤー1
 #define SCROLL_LAYER_2 5          // スクロールを有効にするレイヤー2
-#define INVERT_X 1                // X軸のスクロールの反転
+#define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
 #define SCALING_MODE 1          // 0: 無効, 1: 有効
@@ -115,7 +115,7 @@
     motion_scaler: motion_scaler {
         compatible = "zmk,input-processor-motion-scaler";
         #input-processor-cells = <0>;
-        scaling-mode = <SCALING_MODE>;
+        scaling-mode = <1>;
         u = <300>;
         xs = <50>;
         p-tenths = <20>;
