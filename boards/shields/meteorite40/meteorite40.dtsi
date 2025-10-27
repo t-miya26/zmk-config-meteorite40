@@ -117,8 +117,8 @@
         #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
         u = <250>;
-        xs = <50>
-        p-tenths = <10>
+        xs = <50>;
+        p-tenths = <10>;
         track-remainders;
     };
 
