@@ -116,9 +116,9 @@
         compatible = "zmk,input-processor-motion-scaler";
         #input-processor-cells = <0>;
         scaling-mode = <SCALING_MODE>;
-        u = <250>;
+        u = <300>;
         xs = <50>;
-        p-tenths = <10>;
+        p-tenths = <20>;
         track-remainders;
     };
 
