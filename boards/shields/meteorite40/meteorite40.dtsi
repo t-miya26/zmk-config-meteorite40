@@ -118,7 +118,7 @@
         scaling-mode = <1>;
         u = <300>;
         xs = <50>;
-        p-tenths = <20>;
+        p-tenths = <10>;
         track-remainders;
     };
 
