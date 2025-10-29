@@ -136,7 +136,7 @@
         max-output = <SCROLL_MAX_OUTPUT>;
         half-input = <SCROLL_HALF_INPUT>;
         exponent-tenths = <SCROLL_EXPONENT_TENTHS>;
-        track-remainders;
+        //track-remainders;
     };
 
     sensor_rotation: sensor_rotation {
