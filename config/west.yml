@@ -21,5 +21,8 @@ manifest:
     - name: zmk-feature-scaling
       remote: iwk7273
       revision: main
+    - name: zmk-smart-toggle
+      remote: iwk7273
+      revision: main
   self:
     path: config
