@@ -47,6 +47,14 @@
 			flavor = "hold-preferred";
 			bindings = <&kp>, <&swapper>;
 		};
+
+		mouse_scroll: mouse_scroll {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			label = "MOUSE_SCROLL";
+			#sensor-binding-cells = <2>;
+			bindings = <&msc>, <&msc>;
+			tap-ms = <20>;
+    	};
     };
 	
 	combos {
