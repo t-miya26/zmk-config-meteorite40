@@ -143,8 +143,8 @@
 
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
-				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
-				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				 <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
 				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
@@ -159,9 +159,9 @@
 
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
-				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
-				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
+				 <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		win_layer_2 {
