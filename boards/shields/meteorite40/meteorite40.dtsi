@@ -85,6 +85,20 @@
         wakeup-source;
     };
 
+    scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        }; 
+        
+    scroll_left_right: scroll_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            tap-ms = <20>;
+        };   
+
     /*
     xy_transf: xy_transf {
         compatible = "zmk,input-processor-transform";
@@ -128,7 +142,6 @@
         track-remainders;
     };
 
-    // スクロール専用のモーションスケーラ
     scroll_motion_scaler: motion_scaler_scroll {
         compatible = "zmk,input-processor-motion-scaler";
         #input-processor-cells = <0>;
