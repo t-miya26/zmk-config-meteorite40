@@ -90,17 +90,16 @@
     };
 
     scroll_up_down: scroll_up_down {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        /* Increase per-step delta for encoder scrolling */
-        bindings = <&msc MOVE(0, -100)>, <&msc MOVE(0, 100)>;
+        compatible = "zmk,behavior-sensor-rotate-var";
+        #sensor-binding-cells = <2>;
+        bindings = <&msc>, <&msc>;
         tap-ms = <20>;
     };
 
     scroll_left_right: scroll_left_right {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc MOVE(100, 0)>, <&msc MOVE(-100, 0)>;
+        compatible = "zmk,behavior-sensor-rotate-var";
+        #sensor-binding-cells = <2>;
+        bindings = <&msc>, <&msc>;
         tap-ms = <20>;
     };    
 
