@@ -1,6 +1,4 @@
 #include <behaviors.dtsi>
-#include <behaviors/mouse_move.dtsi>
-#include <behaviors/mouse_scroll.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -49,6 +47,14 @@
 			flavor = "hold-preferred";
 			bindings = <&kp>, <&swapper>;
 		}; 
+
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
     };
 	
 	combos {
@@ -144,7 +150,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_up_down MOVE(0, -100) MOVE(0, 100)>, <&scroll_up_down MOVE(0, -100) MOVE(0, 100)>;
+				<&scroll_up_down>,
+				<&scroll_up_down>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
