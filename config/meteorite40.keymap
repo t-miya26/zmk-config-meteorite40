@@ -144,9 +144,9 @@
 			>;
 
 			sensor-bindings =
-				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
-				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
-				//<&scroll_up_down>, <&scroll_up_down>;
+				<&scroll_up_down>, <&scroll_up_down>;
+				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
+				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
 
 		win_layer_1 {
