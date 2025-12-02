@@ -48,13 +48,12 @@
 			bindings = <&kp>, <&swapper>;
 		};
 
-		mouse_scroll: mouse_scroll {
+		enc_scroll: enc_scroll {
 			compatible = "zmk,behavior-sensor-rotate-var";
-			//label = "MOUSE_SCROLL";
 			#sensor-binding-cells = <2>;
 			bindings = <&msc>, <&msc>;
 			tap-ms = <20>;
-    	};
+		};
     };
 	
 	combos {
@@ -152,7 +151,7 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
-				<&mouse_scroll SCRL_UP SCRL_DOWN>;
+				<&enc_scroll SCRL_UP SCRL_DOWN>;
 		};
 
 		win_layer_1 {
@@ -167,7 +166,7 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
-				<&mouse_scroll SCRL_RIGHT SCRL_LEFT>;
+				<&enc_scroll SCRL_RIGHT SCRL_LEFT>;
 		};
 
 		win_layer_2 {
