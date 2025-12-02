@@ -26,8 +26,6 @@
 #define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
 #define DEBOUNCE_MS 7           // デバウンス時間 (ms)
 
-#define ZMK_MOUSE_SCRL_VAL 1
-
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -87,27 +85,6 @@
         debounce-release-ms = <DEBOUNCE_MS>;
         poll-period-ms = <POLL_PERIOD_MS>;
         wakeup-source;
-    };
-
-    scroll_up_down: scroll_up_down {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&msc>, <&msc>;
-        tap-ms = <20>;
-    };
-
-    scroll_left_right: scroll_left_right {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&msc>, <&msc>;
-        tap-ms = <20>;
-    };    
-
-    /* Faster response for encoder-driven scroll */
-    &msc {
-        trigger-period-ms = <1>;
-        time-to-max-speed-ms = <0>;
-        acceleration-exponent = <0>;
     };
 
     /*
