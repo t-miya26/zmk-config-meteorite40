@@ -1,8 +1,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/input_transform.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <behaviors/mouse_scroll.dtsi>
 #include <input/processors.dtsi>
 
 #define DEFAULT_CPI 1000        // トラックボールの感度
@@ -25,6 +23,10 @@
 
 #define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
 #define DEBOUNCE_MS 7           // デバウンス時間 (ms)
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 1000 
+
+#include <dt-bindings/zmk/pointing.h>
 
 &spi0 {
     status = "okay";
