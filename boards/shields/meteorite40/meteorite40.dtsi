@@ -93,16 +93,23 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         /* Increase per-step delta for encoder scrolling */
-        bindings = <&msc MOVE(0, -40)>, <&msc MOVE(0, 40)>;
+        bindings = <&msc MOVE(0, -100)>, <&msc MOVE(0, 100)>;
         tap-ms = <20>;
     };
 
     scroll_left_right: scroll_left_right {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc MOVE(40, 0)>, <&msc MOVE(-40, 0)>;
+        bindings = <&msc MOVE(100, 0)>, <&msc MOVE(-100, 0)>;
         tap-ms = <20>;
     };    
+
+    /* Faster response for encoder-driven scroll */
+    &msc {
+        trigger-period-ms = <1>;
+        time-to-max-speed-ms = <0>;
+        acceleration-exponent = <0>;
+    };
 
     /*
     xy_transf: xy_transf {
