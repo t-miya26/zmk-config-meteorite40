@@ -88,18 +88,18 @@
     };
 
     scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
-        }; 
-        
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        tap-ms = <20>;
+    };
+
     scroll_left_right: scroll_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = <20>;
-        };   
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        tap-ms = <20>;
+    };    
 
     /*
     xy_transf: xy_transf {
