@@ -137,7 +137,7 @@
 		win_base {
 			display-name = "WIN BASE";
 			bindings = <
-				&&msc SCRL_UP        &kp W       &kp E        &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O    &kp P
+				&msc SCRL_UP        &kp W       &kp E        &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O    &kp P
 				&mt LSHIFT A &mt LALT S  &kp D        &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L    &kp MINUS
 				&kp Z        &kp X       &kp C        &kp V        &kp B        &mkp MB1     &mkp MB2    &kp N        &kp M       &kp COMMA   &kp DOT  &lt 7 SLASH
 								&ht_sw LWIN 0 &mt LCTRL TAB  &mt LSHIFT SPACE  &lt 1 SPACE  &lt 2 ENTER  &lt 2 ENTER  &lt 6 BSPC  &kp RALT
