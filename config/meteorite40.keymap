@@ -144,6 +144,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		win_layer_1 {
@@ -158,6 +160,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		win_layer_2 {
@@ -172,6 +176,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
         mac_base {
@@ -186,6 +192,8 @@
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                // <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+                // <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
         };
 
 		mac_layer_4 {
@@ -200,6 +208,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		mac_layer_5 {
@@ -214,6 +224,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		common_layer_6 {
@@ -228,6 +240,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 		common_layer_7 {
@@ -242,6 +256,8 @@
 			sensor-bindings =
 				<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
+				// <&inc_dec_kp MWHEEL_DOWN MWHEEL_UP>; // vertical scroll
+				// <&inc_dec_kp MWHEEL_LEFT MWHEEL_RIGHT>; // horizontal scroll
 		};
 
 	};
