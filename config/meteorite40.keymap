@@ -163,7 +163,7 @@
 
 			sensor-bindings =
 				<&rot_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>,
-				<&rot_kp K_SCROLL_UP K_SCROLL_DOWN>;
+				<&scroll_up_down>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
