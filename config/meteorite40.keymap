@@ -61,6 +61,12 @@
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
             //tap-ms = <20>;
         };
+		
+		rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 	
 	combos {
@@ -156,8 +162,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_up_down>,
-				<&scroll_up_down>;
+				<&rot_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>,
+				<&rot_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
