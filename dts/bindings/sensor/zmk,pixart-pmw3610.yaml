@@ -1,0 +1,7 @@
+# Custom binding to map the external zmk-pmw3610-driver to a unique
+# compatible string while preserving the upstream properties.
+description: ZMK custom PixArt PMW3610 binding
+
+compatible: "zmk,pixart-pmw3610"
+
+include: input/pixart,pmw3610.yaml
