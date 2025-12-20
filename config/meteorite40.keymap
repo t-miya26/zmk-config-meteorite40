@@ -53,17 +53,17 @@
 		}; 
 
         scroll_up_down: mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <5>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            //tap-ms = <5>;
         };
 
         scroll_left_right: mouse_wheel_up_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            tap-ms = <5>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            //tap-ms = <5>;
         };
 		
 		rot_kp: sensor_rotate_kp {
@@ -166,8 +166,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_left_right>,
-				<&scroll_up_down>;
+				<&scroll_left_right MOVE_X(1) MOVE_X(-1)>,
+				<&scroll_up_down MOVE_Y(1) MOVE_Y(-1)>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
