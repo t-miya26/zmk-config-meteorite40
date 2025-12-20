@@ -4,10 +4,3 @@ config ZMK_KEYBOARD_NAME
     default "meteorite40"
 
 endif
-
-if SHIELD_METEORITE40_LOW
-
-config ZMK_KEYBOARD_NAME
-    default "meteorite40_low"
-
-endif

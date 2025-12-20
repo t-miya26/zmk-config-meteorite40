@@ -1,4 +1,4 @@
-#include "meteorite40.dtsi" 
+#include "../common/meteorite40.dtsi"
 #include "meteorite40-layout.dtsi"
 
 &LAYOUT_SPLIT_SPACE {
