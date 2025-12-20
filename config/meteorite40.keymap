@@ -56,14 +56,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <80>;
+            tap-ms = <5>;
         };
 
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+        scroll_left_right: mouse_wheel_up_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            tap-ms = <80>;
+            tap-ms = <5>;
         };
 		
 		rot_kp: sensor_rotate_kp {
@@ -166,8 +166,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_up_down>,
-				<&scroll_left_right>;
+				<&scroll_left_right>,
+				<&scroll_up_down>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
@@ -182,8 +182,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_up_down>,
-				<&scroll_left_right>;
+				<&scroll_left_right>,
+				<&scroll_up_down>;
 		};
 
 		win_layer_2 {
