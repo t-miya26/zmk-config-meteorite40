@@ -56,14 +56,14 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            //tap-ms = <5>;
+            tap-ms = <16>;
         };
 
         scroll_left_right: mouse_wheel_up_left_right {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            //tap-ms = <5>;
+            tap-ms = <16>;
         };
 		
 		rot_kp: sensor_rotate_kp {
