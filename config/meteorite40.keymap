@@ -182,8 +182,8 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_left_right>,
-				<&scroll_up_down>;
+				<&scroll_left_right MOVE_X(1) MOVE_X(-1)>,
+				<&scroll_up_down MOVE_Y(1) MOVE_Y(-1)>;
 		};
 
 		win_layer_2 {
