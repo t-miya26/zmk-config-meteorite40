@@ -21,8 +21,8 @@
 #define SCROLL_HALF_INPUT 55
 #define SCROLL_EXPONENT_TENTHS 6  // p = 0.6
 
-#define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
-#define DEBOUNCE_MS 7           // デバウンス時間 (ms)
+#define POLL_PERIOD_MS 15       // キースキャンのポーリング周期（ms）
+#define DEBOUNCE_MS 10           // デバウンス時間 (ms)
 
 &spi0 {
     status = "okay";
