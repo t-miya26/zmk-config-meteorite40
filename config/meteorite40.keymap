@@ -165,8 +165,9 @@
 			>;
 
 			sensor-bindings =
-				<&scroll_left_right SCRL_UP SCRL_DOWN>,
-				<&scroll_up_down SCRL_LEFT SCRL_RIGHT>;
+				<&scroll_left_right SCRL_DOWN SCRL_UP>,
+				<&scroll_left_right SCRL_DOWN SCRL_UP>;
+				//<&scroll_up_down SCRL_RIGHT SCRL_LEFT>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
