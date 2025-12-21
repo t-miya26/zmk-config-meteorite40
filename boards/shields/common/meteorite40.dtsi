@@ -4,21 +4,25 @@
 #include <input/processors.dtsi>
 
 #define DEFAULT_CPI 1000        // トラックボールの感度
-#define ROTATION_ANGLE 30       // トラックボールのY軸を回転
-#define CLIPPER_THRESHOLD 40    // スクロール時に斜めの値をクリップ
+#define ROTATION_ANGLE 0        // トラックボールのY軸を回転
+#define CLIPPER_THRESHOLD 20    // スクロール時に斜めの値をクリップ
 
 #define SCROLL_LAYER_1 2          // スクロールを有効にするレイヤー1
 #define SCROLL_LAYER_2 5          // スクロールを有効にするレイヤー2
 #define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
-#define SCALING_MODE 1          // 0: 無効, 1: 有効
+#define SCALING_MODE 0          // 0: 無効, 1: 有効
 #define MAX_OUTPUT 300          // 出力の最大絶対値 |y|。既定 127
 #define HALF_INPUT 50           // r=|x|/xs の xs（counts）。既定 50
 #define EXPONENT_TENTHS 12      // 指数 p を 0.1 分解能で指定（p*10、例: 15 は p=1.5）。既定 10（p=1.0）
 
-#define POLL_PERIOD_MS 20       // キースキャンのポーリング周期（ms）
-#define DEBOUNCE_MS 7           // デバウンス時間 (ms)
+#define SCROLL_MAX_OUTPUT 300
+#define SCROLL_HALF_INPUT 55
+#define SCROLL_EXPONENT_TENTHS 6  // p = 0.6
+
+#define POLL_PERIOD_MS 15       // キースキャンのポーリング周期（ms）
+#define DEBOUNCE_MS 10           // デバウンス時間 (ms)
 
 &spi0 {
     status = "okay";
@@ -30,7 +34,7 @@
     pinctrl-names = "default", "sleep";
 
     trackball: pmw3610@0 {
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-custom";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // MOTION: P1.12
@@ -124,6 +128,16 @@
         track-remainders;
     };
 
+    scroll_motion_scaler: motion_scaler_scroll {
+        compatible = "zmk,input-processor-motion-scaler";
+        #input-processor-cells = <0>;
+        scaling-mode = <SCALING_MODE>;
+        max-output = <SCROLL_MAX_OUTPUT>;
+        half-input = <SCROLL_HALF_INPUT>;
+        exponent-tenths = <SCROLL_EXPONENT_TENTHS>;
+        //track-remainders;
+    };
+
     sensor_rotation: sensor_rotation {
         compatible = "zmk,input-processor-sensor-rotation";
         #input-processor-cells = <0>;
@@ -149,6 +163,7 @@
             layers = <SCROLL_LAYER_1 SCROLL_LAYER_2>;
             input-processors = <&sensor_rotation>,
                                <&xy_clipper>,
+                               <&scroll_motion_scaler>,
                                <&to_wheel>;
         };
     };
