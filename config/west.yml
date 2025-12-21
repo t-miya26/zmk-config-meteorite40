@@ -24,5 +24,8 @@ manifest:
     - name: zmk-smart-toggle
       remote: iwk7273
       revision: main
+    - name: zmk-feature-meteorite-config
+      remote: iwk7273
+      revision: main
   self:
     path: config

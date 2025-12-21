@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/custom_config.dtsi>
+#include <dt-bindings/zmk/custom_config.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 #include <dt-bindings/zmk/pointing.h>
@@ -150,8 +152,8 @@
         layer_4 {
             display-name = "SETTING";
             bindings = <
-                &bootloader  &none   &none   &none   &none                                 &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &none        &none   &none   &none   &none                                 &bt BT_CLR     &bt BT_CLR_ALL  &none         &none         &none
+                &bootloader  &cust_cfg CUSTOM_CFG_CPI_DEC      &cust_cfg CUSTOM_CFG_CPI_INC      &cust_cfg CUSTOM_CFG_SCROLL_DIV_DEC  &cust_cfg CUSTOM_CFG_SCROLL_DIV_INC   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                &cust_cfg CUSTOM_CFG_ROT_DEC                   &cust_cfg CUSTOM_CFG_ROT_INC      &cust_cfg CUSTOM_CFG_SCALING_TOGGLE  &cust_cfg CUSTOM_CFG_SCROLL_H_REV_TOGGLE  &cust_cfg CUSTOM_CFG_SCROLL_V_REV_TOGGLE  &bt BT_CLR     &bt BT_CLR_ALL  &cust_cfg CUSTOM_CFG_RESET_DEFAULTS  &cust_cfg CUSTOM_CFG_SAVE  &none
                 &none        &none   &none   &none   &none   &none           &none         &none          &none           &none         &none         &none
                                                 &trans       &trans  &trans  &trans  &trans  &trans          &trans        &trans
             >;
