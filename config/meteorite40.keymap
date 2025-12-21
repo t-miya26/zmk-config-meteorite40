@@ -4,8 +4,7 @@
 #include <behaviors/custom_config.dtsi>
 #include <dt-bindings/zmk/custom_config.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 200    // default: 10
-
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 #include <dt-bindings/zmk/pointing.h>
 
 &mt { 
@@ -156,7 +155,6 @@
 			sensor-bindings =
 				<&mouse_scroll SCRL_LEFT SCRL_RIGHT>,
 				<&mouse_scroll SCRL_UP SCRL_DOWN>;
-				//<&scroll_up_down SCRL_RIGHT SCRL_LEFT>;
 				//<&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +
 				//<&inc_dec_kp C_VOL_DN C_VOL_UP>; // RE1: volume down/up
 		};
@@ -248,10 +246,10 @@
 		common_layer_7 {
 			display-name = "SETTING";
 			bindings = <
-				&cust_cfg CCFG_CPI_UP  &cust_cfg CCFG_CPI_DN  &cust_cfg CCFG_ROT_UP   &cust_cfg CCFG_ROT_DN   &cust_cfg CCFG_SCALE_TOG                      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-				&cust_cfg CCFG_SDIV_UP &cust_cfg CCFG_SDIV_DN &cust_cfg CCFG_SCRH_TOG &cust_cfg CCFG_SCRV_TOG &none                                &bt BT_CLR     &bt BT_CLR_ALL  &none         &none         &none
-				&cust_cfg CCFG_SAVE    &cust_cfg CCFG_RESET   &none          &none          &none           &bt0_win &bt1_mac    &bootloader    &none           &none         &none         &none
-												&trans       &trans  &trans  &trans  &trans  &trans          &trans        &trans
+				&cust_cfg CCFG_CPI_DN  &cust_cfg CCFG_CPI_UP  &cust_cfg CCFG_ROT_DN   &cust_cfg CCFG_ROT_UP   &cust_cfg CCFG_SCALE_TOG                      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+				&cust_cfg CCFG_SDIV_DN &cust_cfg CCFG_SDIV_UP &cust_cfg CCFG_SCRH_TOG &cust_cfg CCFG_SCRV_TOG &none                                         &bt BT_CLR     &bt BT_CLR_ALL  &none         &none         &none
+				&cust_cfg CCFG_SAVE    &cust_cfg CCFG_RESET   &none                   &none                   &none                    &bt0_win &bt1_mac    &bootloader    &none           &none         &none         &none
+												                                                 &trans       &trans  &trans  &trans  &trans  &trans          &trans        &trans
 			>;
 
 			sensor-bindings =
