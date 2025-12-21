@@ -247,9 +247,9 @@
 		common_layer_7 {
 			display-name = "SETTING";
 			bindings = <
-				&CCFG_CPI_UP  &CCFG_CPI_DN  &CCFG_ROT_UP   &CCFG_ROT_DN   &CCFG_SCALE_TOG                      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-				&CCFG_SDIV_UP &CCFG_SDIV_DN &CCFG_SCRH_TOG &CCFG_SCRV_TOG &none                                &bt BT_CLR     &bt BT_CLR_ALL  &none         &none         &none
-				&CCFG_SAVE    &CCFG_RESET   &none          &none          &none           &bt0_win &bt1_mac    &bootloader    &none           &none         &none         &none
+				&cust_cfg CCFG_CPI_UP  &cust_cfg CCFG_CPI_DN  &cust_cfg CCFG_ROT_UP   &cust_cfg CCFG_ROT_DN   &cust_cfg CCFG_SCALE_TOG                      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+				&cust_cfg CCFG_SDIV_UP &cust_cfg CCFG_SDIV_DN &cust_cfg CCFG_SCRH_TOG &cust_cfg CCFG_SCRV_TOG &none                                &bt BT_CLR     &bt BT_CLR_ALL  &none         &none         &none
+				&cust_cfg CCFG_SAVE    &cust_cfg CCFG_RESET   &none          &none          &none           &bt0_win &bt1_mac    &bootloader    &none           &none         &none         &none
 												&trans       &trans  &trans  &trans  &trans  &trans          &trans        &trans
 			>;
 
