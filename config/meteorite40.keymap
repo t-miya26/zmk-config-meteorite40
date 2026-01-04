@@ -123,7 +123,6 @@
 &cust_cfg CCFG_SAVE    &cust_cfg CCFG_RESET   &none                  	&none                  		&none						&none	&none      	&none	    	&none           &none         &none         &pw
 											  &trans					&trans     					&bootloader					&trans  &trans  	&trans    		&trans       	&trans
 			>;
-            >;
 
             sensor-bindings =
                 <&inc_dec_kp LC(MINUS) LC(EQUAL)>, // RE0: ctrl + - / +,,,
